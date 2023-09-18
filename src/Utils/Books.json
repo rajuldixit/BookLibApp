@@ -1,0 +1,24 @@
+{
+  "Books": [
+    {"id": 1, "title": "", "description": "", "tags": [], "author": "", 
+    "publisher": "", "editors": [], "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 2, "title": "", "description": "", "tags": [], "author": "", "publisher": "", "editors": [], 
+    "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 3, "title": "", "description": "", "tags": [], "author": "", 
+    "publisher": "", "editors": [], "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 4, "title": "", "description": "", "tags": [], "author": "", "publisher": "", "editors": [], 
+    "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 5, "title": "", "description": "", "tags": [], "author": "", 
+    "publisher": "", "editors": [], "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 6, "title": "", "description": "", "tags": [], "author": "", "publisher": "", "editors": [], 
+    "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 7, "title": "", "description": "", "tags": [], "author": "", 
+    "publisher": "", "editors": [], "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 8, "title": "", "description": "", "tags": [], "author": "", "publisher": "", "editors": [], 
+    "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 9, "title": "", "description": "", "tags": [], "author": "", 
+    "publisher": "", "editors": [], "category": "", "publication_date": "", "ratings": "", "culture":""},
+    {"id": 10, "title": "", "description": "", "tags": [], "author": "", "publisher": "", "editors": [], 
+    "category": "", "publication_date": "", "ratings": "", "culture":""}
+  ]
+}
