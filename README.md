@@ -1,2 +1,6 @@
 # BookLibApp
-## In this app, we have client and server
+## This is a React js and express js app
+
+### Folder Structure
+#### Client
+#### Server
