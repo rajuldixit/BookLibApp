@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "firstname": "rajul",
+      "lastname": "dixit",
+      "email": "rajul@gmail.com",
+      "gender": "rajul",
+      "password": "12345"
+    },
+    {
+      "firstname": "prajul",
+      "lastname": "dixit",
+      "email": "prajul@gmail.com",
+      "gender": "prajul",
+      "password": "98765"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Small things like these",
+      "ratings": 3,
+      "author": "some author name",
+      "stock": "true"
+    },
+    {
+      "id": 2,
+      "name": "The thursday murder",
+      "ratings": 2,
+      "author": "some author name",
+      "stock": "false"
+    },
+    {
+      "id": 3,
+      "name": "The Secret History",
+      "ratings": 4,
+      "author": "some author name",
+      "stock": "true"
+    },
+    {
+      "id": 4,
+      "name": "It ends with us",
+      "ratings": 5,
+      "author": "some author name",
+      "stock": "true"
+    },
+    {
+      "id": 5,
+      "name": "Killers of the flower",
+      "ratings": 3,
+      "author": "some author name",
+      "stock": "true"
+    },
+    {
+      "id": 6,
+      "name": "The virgin suicides",
+      "ratings": 2,
+      "author": "some author name",
+      "stock": "true"
+    },
+    {
+      "id": 7,
+      "name": "All the light",
+      "ratings": 5,
+      "author": "some author name",
+      "stock": "false"
+    },
+    {
+      "id": 8,
+      "name": "The bell jar",
+      "ratings": 1,
+      "author": "some author name",
+      "stock": "true"
+    }
+  ]
+}
