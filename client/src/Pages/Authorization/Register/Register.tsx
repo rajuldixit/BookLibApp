@@ -1,35 +1,53 @@
-import { Box, Paper, TextField, Button, Typography, Avatar, Checkbox, Container, CssBaseline, FormControlLabel, Grid, ThemeProvider, createTheme } from '@mui/material'
-import axios from 'axios'
-import React, { FC } from 'react'
-import { useNavigate } from 'react-router-dom'
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import {
+  Box,
+  Paper,
+  TextField,
+  Button,
+  Typography,
+  Avatar,
+  Checkbox,
+  Container,
+  CssBaseline,
+  FormControlLabel,
+  Grid,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material";
+import axios from "axios";
+import React, { useState, FC } from "react";
+import { useNavigate } from "react-router-dom";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
-interface Props { 
-    setLogin: React.MouseEventHandler<HTMLButtonElement> 
+interface Props {
+  setLogin: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const defaultTheme = createTheme();
 
-const Register: FC<Props> = ({setLogin}) => {
-  const navigate = useNavigate()
+const Register: FC<Props> = ({ setLogin }) => {
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const url = process.env.SERVER_API || "http://localhost:8080/";
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-    const url = process.env.SERVER_API || 'http://localhost:8080/'
-    axios.post(`${url}register`, {firstname: 'prajul', lastname: 'dixit', email: 'prajul@gmail.com', 
-    username: 'prajul', password: '98765'}).then((resp) => {
-    if(resp.status === 200) {
-        navigate('/home') 
-    }
-    }).catch((e) => {
-        console.log('error :', e)
-    })
-  }  
+    axios
+      .post(`${url}register`, {
+        firstname: data.get("firstName"),
+        lastname: data.get("lastName"),
+        email: data.get("email"),
+        username: data.get("username"),
+        password: data.get("password"),
+      })
+      .then((resp) => {
+        if (resp.status === 200) {
+          navigate("/home");
+        }
+      })
+      .catch((e) => {
+        console.log("error :", e);
+      });
+  };
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">
@@ -37,18 +55,23 @@ const Register: FC<Props> = ({setLogin}) => {
         <Box
           sx={{
             marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box
+            component="form"
+            noValidate
+            onSubmit={handleSubmit}
+            sx={{ mt: 3 }}
+          >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -85,6 +108,16 @@ const Register: FC<Props> = ({setLogin}) => {
                 <TextField
                   required
                   fullWidth
+                  id="username"
+                  label="Username"
+                  name="username"
+                  autoComplete="username"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
                   name="password"
                   label="Password"
                   type="password"
@@ -94,7 +127,9 @@ const Register: FC<Props> = ({setLogin}) => {
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
+                  control={
+                    <Checkbox value="allowExtraEmails" color="primary" />
+                  }
                   label="I want to receive inspiration, marketing promotions and updates via email."
                 />
               </Grid>
@@ -107,16 +142,17 @@ const Register: FC<Props> = ({setLogin}) => {
             >
               Sign Up
             </Button>
-            <Grid container justifyContent="flex-end">
+            <Grid container>
               <Grid item>
-                Already have an account? Sign in <Button onClick={setLogin}>Login</Button>
+                Already have an account? Sign in{" "}
+                <Button onClick={setLogin}>Login</Button>
               </Grid>
             </Grid>
           </Box>
         </Box>
       </Container>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;

@@ -13,6 +13,13 @@
       "email": "prajul@gmail.com",
       "gender": "prajul",
       "password": "98765"
+    },
+    {
+      "firstname": "salki",
+      "lastname": "dixit",
+      "email": "salki@gmail.com",
+      "gender": "salkidixit",
+      "password": "12345"
     }
   ],
   "books": [
